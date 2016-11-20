@@ -1,0 +1,27 @@
+With the users example we can modify and query the users table
+with the following endpoints.
+
+Remember to configure a database, as mentioned in config.php
+
+Note: There is no API authentication in this sample.
+
+Create a new user:
+  users.php?new=1&name=Steev
+
+List all users:
+  users.php?list
+
+Review a single user, given their token ID:
+  users.php?id={token}
+
+
+The results are all on JSON.
+
+
+Note: This was written for Migraine Alert, and still suffers some 
+of its hangovers. Notable, all data is expected to be associated
+to a machine_token. The machine_token and all records have an
+'is owned by' relationship. You can ignore it in most cases; it's 
+more important to introduce authentication to the API!
+
+
